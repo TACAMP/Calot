@@ -1,16 +1,19 @@
 <div class="container">
   <div class="h1">通知</div>
     <% notifications.each do |notification| %>
-      <% if notification.checked == false %>
-        <div class="row">
-          <%= link_to user_path(notification.visited) do %>
-            <% if notification.visited.user_image attached? %>
-              <%= image_tag notification.visited.user_image , size: "80x80" %>
-            <% else %>
-              <%= image_tag 'no_image_square.jpg' , size: "80x80" %>
+      <% visitor = notification.visitor %>
+      <% visited = notification.visited %>
+        <% if notification.checked == false %>
+          <div class="row">
+            <%= link_to user_path(visitor) do %>
+              <% if visitor.user_image attached? %>
+                <%= image_tag visitor.user_image , size: "80x80" %>
+              <% else %>
+                <%= image_tag 'no_image_square.jpg' , size: "80x80" %>
+              <% end %>
+              <%= visitor.user.name %>
             <% end %>
-          <% end %>
-        </div>
-      <% end %>
+          </div>
+        <% end %>
     <% end %>
 </div>

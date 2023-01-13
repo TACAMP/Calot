@@ -12,7 +12,12 @@ class CommentsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:post_id])
-    Comment.find(params[:id]).destroy
+    @comment = Comment.find(params[:id])
+    if @comment.user.id == current_user.id
+      @comment.destroy
+    else
+      redirect_to request.referer
+    end
   end
 
   private

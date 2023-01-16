@@ -9,7 +9,7 @@ class Post < ApplicationRecord
   has_many:tags , through: :post_tags
   has_many:camp_tools ,dependent: :destroy
   has_many:notifications , dependent: :destroy
-  accepts_nested_attributes_for :camp_tools , allow_destroy: true
+  accepts_nested_attributes_for :camp_tools , reject_if: :all_blank , allow_destroy: true
 
   validates :title , presence: true
   validates :description , length: {maximum: 500}

@@ -35,6 +35,8 @@
 - JSライブラリ：jQuery
 - IDE：Cloud9
 
-## 使用素材
-- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
-- 使用しない場合は、使用素材の項目をREADMEから削除してください。
+## ER図
+![ER図_Calot drawio](https://user-images.githubusercontent.com/112141419/217201114-2ea6ea2b-f2d1-4ce8-996c-31c8dc088c2c.png)
+
+## インフラ
+![AWS設計図(石田竜也) drawio](https://user-images.githubusercontent.com/112141419/217201539-3f2afd6f-b74f-40cb-9fb6-4cca586e0d39.png)
